@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- active color : #055EF6 -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iCoder</title>
-    <link rel="icon" href="assets/i.png" type="image/x-icon">
+    <title>iCoder | Visualizer</title>
+    <link rel="icon" href="assets/Coder_adobespark.png" type="image/x-icon">
     <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -14,183 +14,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap" rel="stylesheet">
-    <style>
-             body{}
-            .ptr{cursor: pointer;}
-            .nv-font{font-family: 'Martel Sans', sans-serif;}
-            .nav-bar {  background-color: white;min-width: 400px; z-index: 100;position: fixed;top: 0;left: 0;right: 0;color:black;height: 70px;box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.75);-webkit-box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.75);-moz-box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.75);}
-            .left-nav {display: flex;float: left;}
-            .vc{display: flex;align-items: center;justify-content: center;flex-direction: column;}
-            .right-nav{display: flex;float: left;text-transform: uppercase;margin-left: 150px;}
-            #brand-logo {width: 50px;height: 50px;}
-            .brand-name{display: none;}
-            .brand-name nav-item{display: none;}
-            .brand-icon{height: 70px;margin-left: 70px;}
-            .more-modal{position: absolute;display: block;background-color: blueviolet;width: max-content;}
-            .more-modal div{}
-            .more-modal ul{list-style: none;padding: 0;display: none;}
-            .nav-item{height: 66px;text-align: center;}
-            .nav-item {margin-right: 50px;}
-            .nav-link{display: block;}
-            .nav-active{border-bottom: 4px solid black;}
-            .small,.small2{display: none;position: absolute;} 
-            .modal-small{display: block;background-color: darkblue;float: right;padding: 5px;}
-            .modal-item{display: block;background-color: crimson;}
-            .menu{font-size: 20px;}
-            .modal-small{display: none;}
-            .s6{display: none;}
-            .block{width: 100%;margin-left: 0%;height: 50px;background-color: blue;display: block;margin-bottom: 1px;}
-            .content{display: flex;position: fixed;top: 73px;height: 100vh;left: 0;right: 0;overflow-y: hidden;overflow-x: hidden;min-width: 400px;}
-            .left-bar{width: 20%;min-height: 100vh;overflow-y: scroll;text-align: center;}
-            .left-bar::-webkit-scrollbar-track{background: rgb(209, 203, 203);}
-            .left-bar::-webkit-scrollbar-track:hover{background-color: rgb(202, 194, 194);}
-            .left-bar::-webkit-scrollbar{width: 5px;}
-            .left-bar::-webkit-scrollbar-thumb{background-color: blue;}
-            .left-bar::-webkit-scrollbar-thumb:hover{cursor: pointer;}
-            .left-bar::-webkit-scrollbar-button{display: none;}
-            .content-area::-webkit-scrollbar-button{display: none;}
-            .content-area{width: 80%; min-height: 100vh;overflow-y: scroll;}
-        @media only screen and (max-width: 1600px) {.s6{display: flex;} .s5{display: none;}}
-        @media only screen and (max-width: 1550px) { .s4{display: none;}}
-        @media only screen and (max-width: 1440px) { .s3{display: none;}}
-        @media only screen and (max-width: 1300px) { .right-nav{margin-left: 30px;}}
-        @media only screen and (max-width: 1200px) { .right-nav{margin-left: 25px;}.brand-icon{margin-left: 20px;}}
-        @media only screen and (max-width: 1125px) {
-                .nav-bar {height: 50px;}
-                .content{top:50px;}
-                .right-nav{margin-left: 50px;}
-                #brand-logo {width: 40px;height: 40px;}
-                .brand-icon{height: 50px;margin-left: 30px;}
-                .more-modal{position: absolute;display: block;background-color: blueviolet;width: max-content;}
-                .more-modal ul{list-style: none;padding: 0;display: none;}
-                .nav-item{height: 46px;text-align: center;margin-right: 15px;}
-                .nav-link{display: block;}
-                .nav-active{border-bottom: 3px solid black;}
-        }
-      
-        @media only screen and (max-width: 910px) {
-                .right-nav{display: none;}
-                .small{display: block;right: 0;}
-                .small2{display: block;left:10px;}
-                .left-nav{margin-left: 40%;}
-                .brand-name{display: block;margin-left: 10%;}
-            }
-        @media only screen and (max-width: 800px) {.left-nav{margin-left: 35%;}}
-        @media only screen and (max-width: 700px) {.left-nav{margin-left: 30%;}}
-        @media only screen and (max-width: 500px) {.left-bar{display: none;}.content-area{width: 100%;}}
-        
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="visualiser.css">
 </head>
 
-<body>
+<body class="bg-f">
     <div class="nav-bar nv-font">
-        <div class="small2">
-            <div class="nav-item vc">
-                <div class="material-icons-outlined menu">menu</div>
-            </div>
-            <div class="modal-small">
-                <div class="modal-item">Home</div>
-                <div class="modal-item">Codeforces</div>
-                <div class="modal-item">Codechef</div>
-                <div class="modal-item">CP</div>
-                <div class="modal-item">About us</div>
-                <div class="modal-item">Log out</div>
-                <div class="modal-item">Sign in</div>
-            </div>
-            
-        </div>
         <div class="left-nav">
             <div class="brand-icon vc">
-                <img src="assets/i.png"  alt="i" id="brand-logo">
+                <div  id="brand-logo" class="nav-item vc" style=" font-size: 30px;font-weight: 900; color: #055EF6; font-family: 'Martel Sans', sans-serif;" >iCoder</div>
             </div>
-            <div class="brand-name">
-                <div class="nav-item vc">iCoder</div>
-            </div>
+           
         </div>
         <div class="small">
             <div class="nav-item vc">
-                <div class="material-icons-outlined menu">menu</div>
+                <div class="material-icons-outlined menu ptr" onclick="opennavRight()">menu</div>
             </div>
-            <div class="modal-small">
-                <div class="modal-item">Home</div>
-                <div class="modal-item">Codeforces</div>
-                <div class="modal-item">Codechef</div>
-                <div class="modal-item">CP</div>
-                <div class="modal-item">About us</div>
-                <div class="modal-item">Log out</div>
-                <div class="modal-item">Sign in</div>
             </div>
-            
+        <div id="right-nav-viz" class="sidenav bx-sd right">
+              <div class="close-cont">
+                <div class="material-icons-outlined closebtn right-btn" onclick="closenavRight()">close</div>
+              </div>   
+                <div onclick="openHome(this)" >Home</div>
+                <div onclick="openCompare(this)">Compare</div>
+                <div onclick="openMyStats(this)">My Stats</div>
+                <div onclick="openAboutUs(this)">About us</div>
+                <div onclick="LogOut(this)">Log out</div>
+                <div onclick="signIn(this)">Sign in</div>
+                <div onclick="openMore(this)">More</div>
         </div>
-        <div class="right-nav">
-            
+        <div class="right-nav">        
+            <div class="nav-item vc ">
+                <div class="nav-link ptr home" onclick="openHome(this)">Home</div>
+            </div>
             <div class="nav-item vc nav-active">
-                <div class="nav-link ptr ">Home</div>
+                <div class="nav-link ptr compare" onclick="openCompare(this)">Compare</div>
             </div>
             <div class="nav-item vc">
-                <div class="nav-link ptr">Codeforces</div>
-            </div>
-            <div class="nav-item vc">
-                <div class="nav-link">Codechef</div>
-            </div>
-            <div class="nav-item vc">
-                <div class="nav-link ptr">visualizer</div>
-            </div>
-            <div class="nav-item vc">
-                <div class="nav-link ptr">Competitive programming</div>
-            </div>
-            <div class="nav-item vc">
-                <div class="nav-link ptr">Practice</div>
-            </div>
-           
-            <div class="nav-item vc s3">
-                <div class="nav-link ptr">About us</div>
-            </div>
-            <div class="nav-item vc s4">
-                <div class="nav-link ptr">Profile</div>
-            </div>
-            <div class="nav-item vc s5">
-                <div class="nav-link ptr">Log out</div>
-            </div>
-            <div class="nav-item vc s6">
-                <div class="material-icons-outlined ptr">keyboard_arrow_down</div>
-                <div class="more-modal">
-                    <ul>
-                        <li>About us</li>
-                        <li>Log out</li>
-                    </ul>
-                </div>
+                <div class="nav-link ptr myStats" onclick="openMyStats(this)">My Stats</div>
             </div>
             
+            <div class="nav-item vc">
+                <div class="nav-link ptr aboutUs" onclick="openAboutUs(this)">About us</div>
+            </div>
+            
+            <div class="nav-item vc">
+                <div class="nav-link ptr logout bg-gr logOut" onclick="LogOut(this)">Log out</div>
+            </div>
         </div>
     </div>
     <div class="content">
-        <div class="left-bar">
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-        </div>
-        <div class="content-area">
-             
-        </div>
+        <div class="content-area bg-f" id="compareData">
+            <div class="cf-bar bg-gr1">
+                <input type="text" placeholder="Codeforces handle" id="user-handle">
+                <button id="compare" class="ptr" onclick="plotUser()">Compare</button>
+                <button id="removeLast" class="ptr" onclick="delUser()">Remove last</button>
+            </div>
+            
+            <div class="graph-content">
+            <div class="graph" id="rating" ></div>
+            <div class="graph" id="performance" ></div>
+            <div class="graph" id="total-tried" ></div>
+            <div class="graph" id="total-solved" ></div>
+            <div class="graph" id="total-unsolved" ></div>
+            <div class="graph" id="solved-today" ></div>
+            </div>
+         
+            </div>
+        <div class="content-area bg-f " id="myData">
+            <div class="cf-bar bg-gr1">
+                   <input type="text"  placeholder="Your codeforces handle" style="border-bottom: 1px solid white; padding-bottom: 2px;color: white;background:none;border-radius: 0;" id="myCf">
+            </div>
+            <div class="graph-content">
+            <div class="graph" id="myPerformance"></div>
+                <div class="graph" id="myVerdicts"></div>
+                <div class="graph" id="myLang"></div>
+                <div class="graph" id="myTags"></div>
+                <div class="graph" id="myLevels"></div>
+                <div class="graph" id="myProbRatings"></div> 
+                <div class="graph" id="unsolved">
+                    
+                </div>
+            </div>
+            
+            </div>
+            <div class="content-area bg-f " id="underMaintenance">         
+                <div class="maintenance  bx-sd">
+                    <h1>Coming soon</h1>
+                    <h4>Please check back again...</h4>
+                </div>
+                </div>
     </div>
+   
+    <script>
+        var cfhandle="";
+        var  users=[];
+        var userRating=[];
+        var color=[]
+        var apiURL='https://codeforces.com/api/';
+        var visitURL='https://codeforces.com/';
+      </script>
+      <script src="visualizer.js"></script>
+      <script src="viz-script.js"></script>
+     <script src="mystats.js"></script>
 </body>
 
 </html>
