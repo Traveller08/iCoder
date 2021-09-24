@@ -21,7 +21,7 @@ var dataSolved=[
             color:color,
             line:{
                 width:0,
-                color:'black',
+                color:"#587995",
             },
         },
         type: 'bar'
@@ -36,7 +36,7 @@ var dataUnsolved=[
             color:color,
             line:{
                 width:0,
-                color:'black',
+                color:"#587995",
             },
         },
         type: 'bar'
@@ -51,7 +51,7 @@ var dataTried=[
             color:color,
             line:{
                 width:0,
-                color:'black',
+                color:"#587995",
             },
         },
         type: 'bar'
@@ -66,7 +66,7 @@ var dataToday=[
             color:color,
             line:{
                 width:0,
-                color:'black',
+                color:"#587995",
             },
         },
         type: 'bar'
@@ -81,7 +81,7 @@ var data = [
           color:color,
           line:{
               width:0,
-              color:'black',
+              color:"#587995",
           },
       },
       type: 'bar'
@@ -98,37 +98,37 @@ var data = [
     title:"Friends ratings",
     titlefont:{
       size:18,
-      color:'black',
+      color:"#ffd586bf",
     },
     xaxis: {
         title:"Users",
         titlefont:{
             size: 16,
-            color: 'black'
+            color:"#ffd586bf",
         },
         tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0,
     },
     yaxis: {
       title: 'Ratings',
-      titlefont: {
-        size: 16,
-        color: 'black'
+      titlefont:{
+        size:16,
+        color:"#ffd586bf",
       },
       tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0.4,
     },
     legend: {
       x: 0,
       y: 1.0,
-      bgcolor: 'black',
-      bordercolor: 'black'
+      bgcolor:"#587995",
+      bordercolor:"#587995",
     },
     barmode: 'group',
     bargap: 0.15,
@@ -141,17 +141,17 @@ var data = [
     title:"Friends performance",
     titlefont:{
       size:18,
-      color:'black',
+      color:"#ffd586bf",
     },
     xaxis: {
         title:"Contests",
         titlefont:{
             size: 16,
-            color: 'black'
+            color:"#ffd586bf",
         },
         tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       showgrid:false,
       showticklabels: false,
@@ -160,19 +160,19 @@ var data = [
       title: 'Ratings',
       titlefont: {
         size: 16,
-        color: 'black'
+        color:"#ffd586bf",
       },
       tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       showline:false,
     },
     legend: {
-      x: 0,
-      y: 1.0,
+      x: 1.0,
+      y: 0,
       bgcolor: 'none',
-      bordercolor: 'black'
+      color:"white",
     },
    
     barmode: 'group',
@@ -186,17 +186,17 @@ var data = [
     fig_bgcolor   : "rgba(0, 0, 0, 0)",
     titlefont:{
       size:18,
-      color:'black',
+      color:"#ffd586bf",
     },
     xaxis: {
         title:"Users",
         titlefont:{
             size: 16,
-            color: 'black'
+            color:"#ffd586bf",
         },
         tickfont: {
         size: 14,
-        color: 'black'
+    color:"#587995",
       },
       gridwidth:0,
     },
@@ -204,19 +204,19 @@ var data = [
       title: 'No of attempted problems',
       titlefont: {
         size: 16,
-        color: 'black'
+        color:"#ffd586bf",
       },
       tickfont: {
         size: 14,
-        color: 'black'
+    color:"#587995",
       },
       gridwidth:0.4,
     },
     legend: {
       x: 0,
       y: 1.0,
-      bgcolor: 'black',
-      bordercolor: 'black'
+      color:"#587995",
+      bordercolor: '#ffd586bf'
     },
     // barmode: 'group',
     // bargap: 0.15,
@@ -230,17 +230,17 @@ var data = [
     
     titlefont:{
       size:18,
-      color:'black',
+      color:"#ffd586bf",
     },
     xaxis: {
         title:"Users",
         titlefont:{
             size: 16,
-            color: 'black'
+            color:"#ffd586bf",
         },
         tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0,
     },
@@ -248,19 +248,19 @@ var data = [
         title:"No of problems solved today",
       titlefont: {
         size: 16,
-        color: 'black'
+        color:"#ffd586bf",
       },
       tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0.4,
     },
     legend: {
       x: 0,
       y: 1.0,
-      bgcolor: 'black',
-      bordercolor: 'black'
+      bgcolor:"#587995",
+      bordercolor:"#587995",
     },
     barmode: 'group',
     bargap: 0.15,
@@ -274,17 +274,17 @@ var data = [
     
     titlefont:{
       size:18,
-      color:'black',
+      color:"#ffd586bf",
     },
     xaxis: {
         title:"Users",
         titlefont:{
             size: 16,
-            color: 'black'
+            color:"#ffd586bf",
         },
         tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0,
     },
@@ -292,19 +292,19 @@ var data = [
         title:"No of solved problems",
       titlefont: {
         size: 16,
-        color: 'black'
+        color:"#ffd586bf",
       },
       tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0.4,
     },
     legend: {
       x: 0,
       y: 1.0,
-      bgcolor: 'black',
-      bordercolor: 'black'
+      bgcolor:"#587995",
+      bordercolor:"#587995",
     },
     barmode: 'group',
     bargap: 0.15,
@@ -318,17 +318,17 @@ var data = [
     
     titlefont:{
       size:18,
-      color:'black',
+      color:"#ffd586bf",
     },
     xaxis: {
         title:"Users",
         titlefont:{
             size: 16,
-            color: 'black'
+            color:"#ffd586bf",
         },
         tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0,
     },
@@ -336,19 +336,19 @@ var data = [
         title:"No of unsolved problems",
       titlefont: {
         size: 16,
-        color: 'black'
+        color:"#ffd586bf",
       },
       tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0.4,
     },
     legend: {
       x: 0,
       y: 1.0,
-      bgcolor: 'black',
-      bordercolor: 'black'
+      bgcolor:"#587995",
+      bordercolor:"#587995",
     },
     barmode: 'group',
     bargap: 0.15,
@@ -410,43 +410,35 @@ async function getUserRating(handle){
     const lastContest=ratings['result'][ratings['result'].length-1];
     var nameC=[]
     var ratingC=[]
-    
+    color.push("#"+Math.floor(Math.random()*16777215).toString(16));
     ratings['result'].forEach(element => {
         nameC.push(element.ratingUpdateTimeSeconds);
         ratingC.push(element.newRating);
     });
-    if(dataline.length==0){
-        dataline.push({
+  
+        dataline.push(
+          {
+            color:color[color.length-1],
+          },
+          {
             x:nameC,
             y:ratingC,
             type:'scatter',
             mode:"lines+markers",
             name:handle,
             line:{
-              width:2,
-              color:"black",
+              width:2, 
             },
+            
             hovertemplate: `<i>user</i>: ${handle}<br><b>rating</b>: %{y}<br>`,
-        })
-    }
-    else{
-        dataline.push({
-            x:nameC,
-            y:ratingC,
-            type:'scatter',
-            mode:"lines+markers",
-            name:handle,
-            line:{
-              width:2,
-            },
-            hovertemplate: `<i>user</i>: ${handle}<br><b>rating</b>: %{y}<br>`,
-        })
-    }
+        }
+        )
+    
    
    user_rating=parseInt(lastContest.newRating);
    users.push(handle);
    userRating.push(user_rating);
-   color.push(Math.floor(Math.random()*16777215).toString(16));
+   
    $('#myData .graph-content').children().removeClass('bx-sd');
         $('#compareData .graph-content').children().addClass('bx-sd');
    Plotly.newPlot('rating', data,layout,config);

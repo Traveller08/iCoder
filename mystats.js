@@ -10,17 +10,17 @@ const  myLayout1={
     title:"My performance",
     titlefont:{
       size:18,
-      color:'black',
+      color: "#ffd586bf",
     },
     xaxis: {
         title:"Contests",
         titlefont:{
             size: 16,
-            color: 'black'
+            color: "#ffd586bf",
         },
         tickfont: {
         size: 14,
-        color: 'black'
+        color: "#587995",
       },
       showgrid:false,
       showticklabels: false,
@@ -29,11 +29,11 @@ const  myLayout1={
       title: 'Ratings',
       titlefont: {
         size: 16,
-        color: 'black'
+        color: "#ffd586bf",
       },
       tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       showline:false,
     },
@@ -41,7 +41,7 @@ const  myLayout1={
       x: 0,
       y: 1.0,
       bgcolor: 'none',
-      bordercolor: 'black'
+      bordercolor:"#587995",
     },
 }
 var layoutpi = {
@@ -51,11 +51,11 @@ var layoutpi = {
     title:"My verdicts",
     titlefont:{
       size:18,
-      color:'black',
+      color: "#ffd586bf",
     },   
     textfont: {
         size: 18,
-        color: 'white',
+        color:"#587995",
       },
       showlegend:false,
 };
@@ -66,7 +66,7 @@ var layoutpi1 = {
     title:"My languages",
     titlefont:{
       size:18,
-      color:'black',
+      color:"#587995",
     },
     legend: {
         x: 1,
@@ -75,7 +75,7 @@ var layoutpi1 = {
         font: {
           family: 'sans-serif',
           size: 14,
-          color: 'white'
+          color:"#587995",
         },
       }
     
@@ -87,11 +87,11 @@ var layoutpi3 = {
     title:"My Tags",
     titlefont:{
       size:18,
-      color:'black',
+      color: "#ffd586bf",
     },
     textfont: {
         size: 18,
-        color: 'white',
+        color:"#587995",
       },
       annotations:{
         font: {
@@ -109,7 +109,7 @@ var layoutpi3 = {
         font: {
           family: 'sans-serif',
           size: 14,
-          color: 'white'
+          color:"#587995",
         },
       }
 };
@@ -120,17 +120,17 @@ const  layout_Levels={
     title:"My Levels",
     titlefont:{
       size:18,
-      color:'black',
+      color: "#ffd586bf",
     },
     xaxis: {
         title:"Levels",
         titlefont:{
             size: 16,
-            color: 'black'
+            color: "#ffd586bf",
         },
         tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0,
     },
@@ -138,19 +138,19 @@ const  layout_Levels={
         title:"No of problems solved",
       titlefont: {
         size: 16,
-        color: 'black'
+        color: "#ffd586bf",
       },
       tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0.4,
     },
     legend: {
       x: 0,
       y: 1.0,
-      bgcolor: 'black',
-      bordercolor: 'black'
+      bgcolor:"#587995",
+      bordercolor:"#587995",
     },
     barmode: 'group',
     bargap: 0.15,
@@ -164,17 +164,17 @@ const  layout_probRatings={
     title:"My Problem Ratings",
     titlefont:{
       size:18,
-      color:'black',
+      color: "#ffd586bf",
     },
     xaxis: {
         title:"",
         titlefont:{
             size: 16,
-            color: 'black'
+            color: "#ffd586bf",
         },
         tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0,
     },
@@ -182,19 +182,19 @@ const  layout_probRatings={
         title:"No of problems solved",
       titlefont: {
         size: 16,
-        color: 'black'
+        color: "#ffd586bf",
       },
       tickfont: {
         size: 14,
-        color: 'black'
+        color:"#587995",
       },
       gridwidth:0.4,
     },
     legend: {
       x: 0,
       y: 1.0,
-      bgcolor: 'black',
-      bordercolor: 'black'
+      bgcolor:"#587995",
+      bordercolor:"#587995",
     },
     barmode: 'group',
     bargap: 0.15,
@@ -226,7 +226,7 @@ async function getMyData(handle){
             name:handle,
             line:{
               width:2,
-              color:'black',
+              color:"#587995",
             },
             hovertemplate: `<i>user</i>: ${handle}<br><b>rating</b>: %{y}<br>`,
     })
@@ -355,7 +355,7 @@ var piData = [{
         type: 'pie',
         direction:'anticlockwise',
         textfont: {
-            color: 'white',
+            color:"#587995",
             size: 16,
           },
         textinfo: 'label',
@@ -367,7 +367,7 @@ var piDataLang = [{
         type: 'pie',
         direction:'clockwise',
         textfont: {
-            color: 'white',
+            color:"#587995",
             size: 16,
           },
         textinfo: 'none',
@@ -386,7 +386,7 @@ var piDataTags = [{
             column: 1
           },
         textfont: {
-            color: 'white',
+            color:"#587995",
             size: 14,
           },
         textinfo: 'none',
@@ -401,10 +401,10 @@ var dataLevels = [
           y: levelsCnt,
           name:levels,
           marker:{
-              color:"#055EF6",
+            color: "#587995",   
               line:{
                   width:0,
-                  color:'black',
+                  color:"#587995",
               },
           },
           type: 'bar'
@@ -416,10 +416,10 @@ var dataProb = [
           y: probRatingCnt,
           name:probRating,
           marker:{
-              color:"#055EF6",
+            color: "#587995",
               line:{
                   width:0,
-                  color:'black',
+                  color:"#587995",
               },
           },
           type: 'bar'
