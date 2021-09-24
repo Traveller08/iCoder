@@ -30,7 +30,8 @@ function myStatsDivData(){
     return `<div class="content-area bg-f " id="myData">
     <div class="cf-bar bg-gr1">
            <input type="text"  placeholder="Your codeforces handle" id="myCf">
-    </div>
+            <button class="psolve ptr" onclick="plotMe()" style="margin-left:10px;border:3px solid #edab30;padding: 8px 40px;">Plot</button>
+           </div>
     <div class="graph-content">
     <div class="graph" id="myPerformance"></div>
         <div class="graph" id="myVerdicts"></div>
@@ -52,7 +53,7 @@ function maintenanceDivData(){
 }
 function openCompare(element){
    
-        if($(this).hasClass('nav-link')){
+        if($(this).hasClass('compare')){
             $('.nav-active').removeClass('nav-active');
                 $(this).addClass('nav-active');
         }
@@ -64,7 +65,7 @@ function openCompare(element){
 }
 function openMyStats(element){
 
-    if($(this).hasClass('nav-link')){
+    if($(this).hasClass('myStats')){
         $('.nav-active').removeClass('nav-active');
             $(this).addClass('nav-active');
     }
@@ -76,7 +77,7 @@ function openMyStats(element){
 }
 function openAboutUs(element){
 
-    if($(this).hasClass('nav-link')){
+    if($(this).hasClass('aboutUs')){
         $('.nav-active').removeClass('nav-active');
             $(this).addClass('nav-active');
     }
