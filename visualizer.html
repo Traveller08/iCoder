@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- active color : #055EF6 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCoder | Visualizer</title>
+    <link rel="icon" href="assets/Coder_adobespark.png" type="image/x-icon">
+    <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="visualiser.css">
+</head>
+
+<body class="bg-f">
+     <div class="nav-bar nv-font">
+        <div class="left-nav">
+            <div class="brand-icon vc">
+                <div  id="brand-logo" class="nav-item vc" style=" font-size: 30px;font-weight: 900; font-family: 'Martel Sans', sans-serif;" >iCoder</div>
+            </div>
+           
+        </div>
+        <div class="small">
+            <div class="nav-item vc">
+                <div class="material-icons-outlined menu ptr" onclick="opennavRight()">menu</div>
+            </div>
+            </div>
+        <div id="right-nav-viz" class="sidenav bx-sd right">
+              <div class="close-cont">
+                <div class="material-icons-outlined closebtn right-btn" onclick="closenavRight()">close</div>
+              </div>   
+                <div onclick="openHome(this)" >Home</div>
+                <div onclick="openCompare(this)">Compare</div>
+                <div onclick="openMyStats(this)">My Stats</div>
+                <div onclick="openAboutUs(this)">About us</div>
+                <div onclick="LogOut(this)">Log out</div>
+                <div onclick="signIn(this)">Sign in</div>
+                <div onclick="openMore(this)">More</div>
+        </div>
+        <div class="right-nav">        
+            <div class="nav-item vc ">
+                <div class="nav-link ptr home" onclick="openHome(this)">Home</div>
+            </div>
+            <div class="nav-item vc nav-active">
+                <div class="nav-link ptr compare" onclick="openCompare(this)">Compare</div>
+            </div>
+            <div class="nav-item vc">
+                <div class="nav-link ptr myStats" onclick="openMyStats(this)">My Stats</div>
+            </div>
+            
+            <div class="nav-item vc">
+                <div class="nav-link ptr aboutUs" onclick="openAboutUs(this)">About us</div>
+            </div>
+            
+            <div class="nav-item vc">
+                <div class="nav-link ptr logout bg-gr logOut" onclick="LogOut(this)">Log out</div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+       
+    </div> 
+   
+    <script>
+        var cfhandle="";
+        var  users=[];
+        var userRating=[];
+        var color=[]
+        var apiURL='https://codeforces.com/api/';
+        var visitURL='https://codeforces.com/';
+      </script>
+      <script src="visualizer.js"></script>
+      <script src="viz-script.js"></script>
+     <script src="mystats.js"></script>
+</body>
+
+</html>

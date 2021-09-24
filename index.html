@@ -5,118 +5,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iCoder | Visualizer</title>
+    <title>iCoder</title>
     <link rel="icon" href="assets/Coder_adobespark.png" type="image/x-icon">
     <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="visualiser.css">
+<link rel="stylesheet" href="index.css">
+<style>
+   
+</style>
 </head>
-
-<body class="bg-f">
-     <div class="nav-bar nv-font">
+<body class="bg-f" id="body">
+    <div class="nav-bar nv-font">
         <div class="left-nav">
+            <div class="vc" id ="menuL">
+                <div class="material-icons-outlined menu nav-item ptr vc"  onclick="openLeft()">menu</div>
+            </div>
+            <div id="left-nav-ic" class="sidenav bx-sd left">
+                <div class="close-cont"><div class="material-icons-outlined closebtn left-btn" onclick="closeLeft()">close</div></div>   
+                 
+             </div>
+    
             <div class="brand-icon vc">
-                <div  id="brand-logo" class="nav-item vc" style=" font-size: 30px;font-weight: 900; font-family: 'Martel Sans', sans-serif;" >iCoder</div>
+                <div  id="brand-logo" class="nav-item vc">iCoder</div>
+            </div>
+
+            <div class="vc" id="menuR">
+                <div class="material-icons-outlined menu ptr nav-item vc"  onclick="openRight()">menu</div>
+            </div>
+            <div id="right-nav-ic" class="sidenav bx-sd right">
+                <div class="close-cont"> <div class="material-icons-outlined closebtn right-btn" onclick="closeRight()">close</div></div>   
+                  <div >Home</div>
+                  <div >Codeforces</div>
+                  <div >Codechef</div>
+                  <div >Visualizer</div>
+                  <div >CP</div>
+                  <div >Practice</div>
+                  <div >About us</div>
+                   <div>Profile</div>
+                   <div>Log out</div>
+                   <div>Sign in</div>
+          </div> 
+        </div>
+        <div class="right-nav">      
+            <div class="nav-item vc ">
+                <div class="nav-link ptr nav-active homeN" >Home</div>
+            </div>
+            <div class="nav-item vc">
+                <div class="nav-link ptr codeforcesN">Codeforces</div>
+            </div>
+            <div class="nav-item vc">
+                <div class="nav-link ptr codechefN">Codechef</div>
+            </div>
+            <div class="nav-item vc">
+                <div class="nav-link ptr visualizerN">visualizer</div>
+            </div>
+            <div class="nav-item vc">
+                <div class="nav-link ptr cpN">Competitive programming</div>
+            </div>
+            <div class="nav-item vc">
+                <div class="nav-link ptr practiceN">Practice</div>
             </div>
            
-        </div>
-        <div class="small">
-            <div class="nav-item vc">
-                <div class="material-icons-outlined menu ptr" onclick="opennavRight()">menu</div>
+            <div class="nav-item vc s3">
+                <div class="nav-link ptr aboutusN">About us</div>
             </div>
+            <div class="nav-item vc s4">
+                <div class="nav-link ptr profileN">Profile</div>
             </div>
-        <div id="right-nav-viz" class="sidenav bx-sd right">
-              <div class="close-cont">
-                <div class="material-icons-outlined closebtn right-btn" onclick="closenavRight()">close</div>
-              </div>   
-                <div onclick="openHome(this)" >Home</div>
-                <div onclick="openCompare(this)">Compare</div>
-                <div onclick="openMyStats(this)">My Stats</div>
-                <div onclick="openAboutUs(this)">About us</div>
-                <div onclick="LogOut(this)">Log out</div>
-                <div onclick="signIn(this)">Sign in</div>
-                <div onclick="openMore(this)">More</div>
-        </div>
-        <div class="right-nav">        
-            <div class="nav-item vc ">
-                <div class="nav-link ptr home" onclick="openHome(this)">Home</div>
-            </div>
-            <div class="nav-item vc nav-active">
-                <div class="nav-link ptr compare" onclick="openCompare(this)">Compare</div>
-            </div>
-            <div class="nav-item vc">
-                <div class="nav-link ptr myStats" onclick="openMyStats(this)">My Stats</div>
-            </div>
-            
-            <div class="nav-item vc">
-                <div class="nav-link ptr aboutUs" onclick="openAboutUs(this)">About us</div>
-            </div>
-            
-            <div class="nav-item vc">
-                <div class="nav-link ptr logout bg-gr logOut" onclick="LogOut(this)">Log out</div>
-            </div>
+            <div class="nav-item vc s5">
+                <div class="nav-link ptr logout logoutN">Log out</div>
+            </div>     
         </div>
     </div>
     <div class="content">
-        <div class="content-area" id="compareData">
-            <div class="cf-bar bg-gr1">
-                <input type="text" placeholder="Codeforces handle" id="user-handle">
-                <button id="compare" class="ptr" onclick="plotUser()">Compare</button>
-                <button id="removeLast" class="ptr" onclick="delUser()">Remove last</button>
-            </div>
-            
-            <div class="graph-content">
-            <div class="graph" id="rating" ></div>
-            <div class="graph" id="performance" ></div>
-            <div class="graph" id="total-tried" ></div>
-            <div class="graph" id="total-solved" ></div>
-            <div class="graph" id="total-unsolved" ></div>
-            <div class="graph" id="solved-today" ></div>
-            </div>
-         
-            </div>
-        <div class="content-area bg-f " id="myData">
-            <div class="cf-bar bg-gr1">
-                   <input type="text"  placeholder="Your codeforces handle" id="myCf">
-            </div>
-            <div class="graph-content">
-            <div class="graph" id="myPerformance"></div>
-                <div class="graph" id="myVerdicts"></div>
-                <div class="graph" id="myLang"></div>
-                <div class="graph" id="myTags"></div>
-                <div class="graph" id="myLevels"></div>
-                <div class="graph" id="myProbRatings"></div> 
-                <div class="graph" id="unsolved">
-                    
-                </div>
-            </div>
-            
-            </div>
-            <div class="content-area bg-f " id="underMaintenance">         
-                <div class="maintenance  bx-sd">
-                    <h1>Coming soon</h1>
-                    <h4>Please check back again...</h4>
-                </div>
-                </div>
-    </div> 
-   
-    <script>
-        var cfhandle="";
-        var  users=[];
-        var userRating=[];
-        var color=[]
-        var apiURL='https://codeforces.com/api/';
-        var visitURL='https://codeforces.com/';
-      </script>
-      <script src="visualizer.js"></script>
-      <script src="viz-script.js"></script>
-     <script src="mystats.js"></script>
+        
+    </div>
 </body>
-
+<script>
+     var apiURL='https://codeforces.com/api/';
+        var visitURL='https://codeforces.com/';
+</script>
+<script src="index.js"></script>
+<script src="problems.js"></script>
 </html>

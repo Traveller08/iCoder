@@ -1,69 +1,105 @@
 
 $(document).ready(function(){
     $(document).attr({"title":"iCoder | Visualizer | Compare"});
-    document.querySelector('#compareData').style.display='block';
+    $('.content').html(compareDivData());
+    $('.compare').addClass('nav-active');
 })
 function openHome(element){
     location.replace('index.html');
 }
+function compareDivData(){
+    return ` <div class="content-area" id="compareData">
+    <div class="cf-bar bg-gr1">
+        <input type="text" placeholder="Codeforces handle" id="user-handle">
+        <button id="compare" class="ptr" onclick="plotUser()">Compare</button>
+        <button id="removeLast" class="ptr" onclick="delUser()">Remove last</button>
+    </div>
+    
+    <div class="graph-content">
+    <div class="graph" id="rating" ></div>
+    <div class="graph" id="performance" ></div>
+    <div class="graph" id="total-tried" ></div>
+    <div class="graph" id="total-solved" ></div>
+    <div class="graph" id="total-unsolved" ></div>
+    <div class="graph" id="solved-today" ></div>
+    </div>
+ 
+    </div>`;
+}
+function myStatsDivData(){
+    return `<div class="content-area bg-f " id="myData">
+    <div class="cf-bar bg-gr1">
+           <input type="text"  placeholder="Your codeforces handle" id="myCf">
+    </div>
+    <div class="graph-content">
+    <div class="graph" id="myPerformance"></div>
+        <div class="graph" id="myVerdicts"></div>
+        <div class="graph" id="myLang"></div>
+        <div class="graph" id="myTags"></div>
+        <div class="graph" id="myLevels"></div>
+        <div class="graph" id="myProbRatings"></div> 
+        <div class="graph" id="unsolved"> </div>
+    </div>
+</div>`;
+}
+function maintenanceDivData(){
+    return `  <div class="content-area bg-f " id="underMaintenance">         
+    <div class="maintenance  bx-sd">
+        <h1>Coming soon</h1>
+        <h4>Please check back again...</h4>
+    </div>
+</div>`;
+}
 function openCompare(element){
-    document.querySelector('#underMaintenance').style.display='none';
-        document.querySelector('#myData').style.display='none';
-        $(document).attr({"title":"iCoder | Visualizer | Compare"});
-        document.querySelector('#compareData').style.display='block';
-        if(element.classList.contains('nav-link')){
+   
+        if($(this).hasClass('nav-link')){
             $('.nav-active').removeClass('nav-active');
-                element.parentElement.classList.add('nav-active');
+                $(this).addClass('nav-active');
         }
         else{
             $('.sb-active').removeClass('sb-active');
-            element.classList.add('sb-active');
+            $(this).addClass('sb-active');
         }
+        $('.content').html(compareDivData());
 }
 function openMyStats(element){
-    document.querySelector('#underMaintenance').style.display='none';
-    document.querySelector('#myData').style.display='block';
-    $(document).attr({"title":"iCoder | Visualizer | My Stats"});
-    document.querySelector('#compareData').style.display='none';
-    if(element.classList.contains('nav-link')){
+
+    if($(this).hasClass('nav-link')){
         $('.nav-active').removeClass('nav-active');
-            element.parentElement.classList.add('nav-active');
+            $(this).addClass('nav-active');
     }
     else{
         $('.sb-active').removeClass('sb-active');
-        element.classList.add('sb-active');
+        $(this).addClass('sb-active');
     }
+    $('.content').html(myStatsDivData());
 }
 function openAboutUs(element){
-    
-    document.querySelector('#myData').style.display='none';
-    $(document).attr({"title":"iCoder | Visualizer | About us"});
-    document.querySelector('#compareData').style.display='none';
-    if(element.classList.contains('nav-link')){
+
+    if($(this).hasClass('nav-link')){
         $('.nav-active').removeClass('nav-active');
-            element.parentElement.classList.add('nav-active');
+            $(this).addClass('nav-active');
     }
     else{
         $('.sb-active').removeClass('sb-active');
-        element.classList.add('sb-active');
+        $(this).addClass('sb-active');
     }
-    document.querySelector('#underMaintenance').style.display='block';
+    $('.content').html(maintenanceDivData());
 }
 function LogOut(element){}
 function signIn(element){}
 function openMore(element){
-    document.querySelector('#myData').style.display='none';
-    $(document).attr({"title":"iCoder | Visualizer "});
-    document.querySelector('#compareData').style.display='none';
-    if(element.classList.contains('nav-link')){
+ 
+    if($(this).hasClass('nav-link')){
         $('.nav-active').removeClass('nav-active');
-            element.parentElement.classList.add('nav-active');
+            $(this).addClass('nav-active');
     }
     else{
         $('.sb-active').removeClass('sb-active');
-        element.classList.add('sb-active');
+        $(this).addClass('sb-active');
     }
-    document.querySelector('#underMaintenance').style.display='block';
+    $('.content').html(maintenanceDivData());
+   
 }
 
 $('#user-handle').keypress(function (e) { 
