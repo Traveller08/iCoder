@@ -62,6 +62,31 @@ function opennavRight(){
      </div>                
  </div>`;
   }
+  function openContests(){
+     return `<div class="content-area bg-f" id="contest-area">
+     <div class="problem-bar">   
+        
+         <select name="Selcontest" id="selectContest" class="ptr">
+             <option value="Select contest">Select contest :</option>
+                 <option value="Div 1" title="Div 1">Div. 1</option>
+                 <option value="Div 2" title="Div 2">Div. 2</option>
+                 <option value="Div 3" title="Div 3">Div. 3</option>
+                 <option value="Div 4" title="Div 4">Div. 4</option>
+                 <option value="Div 1 + Div 2" title="Div 1 + Div 2">Div. 1 + Div.2</option>
+                 <option value="Educational" title="Educational">Educational</option>
+                 <option value="Global" title="Global">Global</option>
+                 <option value="Gym" title="Gym">Gym contests</option>
+                 <option value="All contests" title="All contests">All contests</option>
+         </select>
+         <button class="psolve ptr" id="Search" onclick="showContests()">Search</button>
+     </div>
+     <div class="contest-data nv-font">
+         <table id="contest-table">
+              
+         </table>
+     </div>       
+ </div>`;
+  }
   function openMaintenance(){
      return `<div class="content-area bg-f " id="underMaintenance">         
      <div class="maintenance  bx-sd">
@@ -78,7 +103,7 @@ function opennavRight(){
         location.replace('index.html');
     }
     else if($(this).hasClass('codeforcesN')){
-      $('.content').html(openMaintenance());
+      $('.content').html(openContests());
     }
     else if($(this).hasClass('codechefN')){
       $('.content').html(openMaintenance());

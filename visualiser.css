@@ -75,7 +75,7 @@ body{
    /* box-shadow: -5px 5px 11px 6px rgba(237,171,48,0.44);
    -webkit-box-shadow: -5px 5px 11px 6px rgba(237,171,48,0.44);
    -moz-box-shadow: -5px 5px 11px 6px rgba(237,171,48,0.44); */
-   
+   color: #070d1b;
    background-color: #edab30;
 }
    
@@ -600,4 +600,24 @@ th{
     font-size: 36px;
    
   }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #070d1b;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    cursor: pointer;
+  }
+
  
