@@ -1,5 +1,5 @@
 $(document).ready(function(){
-   alert("Currently, the following features are working only \n 1.Codeforces \n 2.Visualizer \n 3.Practice \n whole website will be operational soon :)");
+   alert("Currently, only the following features are working \n 1.Codeforces \n 2.Visualizer \n 3.Practice \n Website will be fully operational soon :)");
 })
 function opennavRight(){
     $('#right-nav-viz').css({"width":"250px"});
