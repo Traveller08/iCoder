@@ -53,37 +53,37 @@ function maintenanceDivData(){
 }
 function openCompare(element){
    
-        if($(this).hasClass('compare')){
+        if($(element).hasClass('compare')){
             $('.nav-active').removeClass('nav-active');
-                $(this).addClass('nav-active');
+                $(element).addClass('nav-active');
         }
         else{
             $('.sb-active').removeClass('sb-active');
-            $(this).addClass('sb-active');
+            $(element).addClass('sb-active');
         }
         $('.content').html(compareDivData());
 }
 function openMyStats(element){
 
-    if($(this).hasClass('myStats')){
+    if($(element).hasClass('myStats')){
         $('.nav-active').removeClass('nav-active');
-            $(this).addClass('nav-active');
+            $(element).addClass('nav-active');
     }
     else{
         $('.sb-active').removeClass('sb-active');
-        $(this).addClass('sb-active');
+        $(element).addClass('sb-active');
     }
     $('.content').html(myStatsDivData());
 }
 function openAboutUs(element){
 
-    if($(this).hasClass('aboutUs')){
+    if($(element).hasClass('aboutUs')){
         $('.nav-active').removeClass('nav-active');
-            $(this).addClass('nav-active');
+            $(element).addClass('nav-active');
     }
     else{
         $('.sb-active').removeClass('sb-active');
-        $(this).addClass('sb-active');
+        $(element).addClass('sb-active');
     }
     $('.content').html(maintenanceDivData());
 }
@@ -91,13 +91,13 @@ function LogOut(element){}
 function signIn(element){}
 function openMore(element){
  
-    if($(this).hasClass('nav-link')){
+    if($(element).hasClass('nav-link')){
         $('.nav-active').removeClass('nav-active');
-            $(this).addClass('nav-active');
+            $(element).addClass('nav-active');
     }
     else{
         $('.sb-active').removeClass('sb-active');
-        $(this).addClass('sb-active');
+        $(element).addClass('sb-active');
     }
     $('.content').html(maintenanceDivData());
    
