@@ -1,3 +1,6 @@
+$(document).ready(function(){
+   alert("Currently, the following features are working only \n 1.Codeforces \n 2.Visualizer \n 3.Practice \n whole website will be operational soon :)");
+})
 function opennavRight(){
     $('#right-nav-viz').css({"width":"250px"});
  }
