@@ -544,7 +544,7 @@ display: block;
          position: fixed;
          left: 10px;
         }
-        .problem-bar{display: none;}
+        
     }
     @media only screen and (max-width: 500px) {
         .problem-card{

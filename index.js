@@ -130,3 +130,40 @@ function opennavRight(){
       $('.content').html(openMaintenance());
    }
  });
+ $('.rt-nv').click(function(){
+   $('.content').html("");
+   
+    $('.sb-active').removeClass('sb-active');
+    $(this).addClass('sb-active');
+    if($(this).hasClass('homeS')){
+        location.replace('index.html');
+    }
+    else if($(this).hasClass('codeforcesS')){
+      $('.content').html(openContests());
+    }
+    else if($(this).hasClass('codechefS')){
+      $('.content').html(openMaintenance());
+   }
+   else if($(this).hasClass('visualizerS')){
+       location.replace('visualizer.html')
+   }
+   else if($(this).hasClass('cpS')){
+      $('.content').html(openMaintenance());
+   }
+   else if($(this).hasClass('practiceS')){
+      $('.content').html(openPractise());
+   }
+   else if($(this).hasClass('aboutusS')){
+      $('.content').html(openMaintenance());
+   }
+   else if($(this).hasClass('profileS')){
+      $('.content').html(openMaintenance());
+   }
+   else if($(this).hasClass('logoutS')){
+      $('.content').html(openMaintenance());
+   }
+   else if($(this).hasClass('signinS')){
+      $('.content').html(openMaintenance());
+   }
+   
+ });
