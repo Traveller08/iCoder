@@ -19,7 +19,7 @@ function getContestData(contest){
     return `<tr>
     <td style="text-align: left;">${contest.name}</td>
     <td style="text-align: right;"><button class="nsolve ptr" id="https://codeforces.com/contestRegistration/${contest.id}/virtual/true" onclick="solveMe(this)">Start Virtual</button></td>
-    <td style="text-align: left;"><button class="psolve ptr" id=""https://codeforces.com/contest/${contest.id}" onclick="solveMe(this)">Solve</button></td>
+    <td style="text-align: left;"><button class="psolve ptr" id="https://codeforces.com/contest/${contest.id}" onclick="solveMe(this)">Solve</button></td>
 </tr>`;
 }
 function fillData(){

@@ -2,10 +2,12 @@
 html{
 
     background-color: #070d1b;
+   
    /* background-image: linear-gradient(180deg, #070d1b 0%, #22224e 50%); */  
-   overflow:hidden;
+  overflow-y: scroll;
    background-size: cover;
    background-repeat: no-repeat;
+   /* background-position-y: center; */
    color: #587895;
 }
 body{
@@ -627,3 +629,17 @@ display: block;
     cursor: pointer;
   }
 
+footer{
+    
+   
+    width: 100%;
+   padding: 20px;
+   height: 300px;
+    background-color: #0b1b3f;
+    z-index: 0;
+    color: #888;
+    text-align: center; 
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.75);
+}

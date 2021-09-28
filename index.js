@@ -96,7 +96,8 @@ function opennavRight(){
          <h1>Coming soon</h1>
          <h4>Please check back again...</h4>
      </div>
-    </div>`;
+    </div>
+`;
   }
  $('.nav-link').click(function(){
    $('.content').html("");
